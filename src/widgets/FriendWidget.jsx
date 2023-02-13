@@ -16,7 +16,7 @@ const FriendWidget = ({ userPicturePath, fullName, createdAt, friendId }) => {
 
   const patchFriend = async () => {
     const response = await fetch(
-      `http://localhost:3001/users/${_id}/${friendId}`,
+      `https://mern-social-media-app-api-e9ni.onrender.com/users/${_id}/${friendId}`,
       {
         method: "PATCH",
         headers: {
@@ -33,7 +33,7 @@ const FriendWidget = ({ userPicturePath, fullName, createdAt, friendId }) => {
       <div className="flex-shrink-0">
         <img
           className="h-10 w-10 rounded-full"
-          src={`http://localhost:3001/assets/${userPicturePath}`}
+          src={`https://mern-social-media-app-api-e9ni.onrender.com/assets/${userPicturePath}`}
           alt=""
         />
       </div>

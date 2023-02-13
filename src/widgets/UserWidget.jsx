@@ -11,7 +11,7 @@ const UserWidget = ({ userId, picturePath }) => {
   const token = useSelector((state) => state.token);
 
   const getUser = async () => {
-    const response = await fetch(`http://localhost:3001/users/${userId}`, {
+    const response = await fetch(`https://mern-social-media-app-api-e9ni.onrender.com/users/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -45,7 +45,7 @@ const UserWidget = ({ userId, picturePath }) => {
                 <div className="flex-shrink-0 h-12 w-12">
                   <img
                     className="h-12 w-12 rounded-full object-cover"
-                    src={`http://localhost:3001/assets/${picturePath}`}
+                    src={`https://mern-social-media-app-api-e9ni.onrender.com/assets/${picturePath}`}
                     alt=""
                   />
                 </div>

@@ -32,7 +32,7 @@ const PostWidget = ({ post }) => {
   const likeCount = Object.keys(likes).length;
 
   const updateLike = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${_id}/like`, {
+    const response = await fetch(`https://mern-social-media-app-api-e9ni.onrender.com/posts/${_id}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ const PostWidget = ({ post }) => {
 
       <div>
         <img
-          src={`http://localhost:3001/assets/${picturePath}`}
+          src={`https://mern-social-media-app-api-e9ni.onrender.com/assets/${picturePath}`}
           className="mt-3"
           alt=""
         />

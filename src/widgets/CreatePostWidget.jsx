@@ -23,7 +23,7 @@ const CreatePostWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3001/posts`, {
+    const response = await fetch(`https://mern-social-media-app-api-e9ni.onrender.com/posts`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,
@@ -40,7 +40,7 @@ const CreatePostWidget = ({ picturePath }) => {
       <div className="flex-shrink-0">
         <img
           className="inline-block h-10 w-10 rounded-full"
-          src={`http://localhost:3001/assets/${picturePath}`}
+          src={`https://mern-social-media-app-api-e9ni.onrender.com/assets/${picturePath}`}
           alt=""
         />
       </div>
